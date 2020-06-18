@@ -2,6 +2,9 @@ library(RCurl)
 library(XML)
 library(readxl)
 library(openxlsx)
+
+###########################
+
 COVID_J = read_excel("JLLE_COVID_hoje.xlsx")
 attach(COVID_J)
 
@@ -66,13 +69,13 @@ UTI_J2 <-UTI_J
 
 linha <-as.numeric(grep('de leitos de UTI',pmjpage))
 pmjpage[linha[3]:(linha[3]+85)]
-utidata <- grabnewdata(pmjpage[(linha[3]+16):(linha[3]+22)],'<td style=\"height: 48px;\">([^<]*)</td>')
+utidata <- grabnewdata(pmjpage[(linha[3]+16):(linha[3]+22)],'<td>([^<]*)</td>')
 utidata2 <- grabnewdata(pmjpage[linha[3]:(linha[3]+22)],'<strong>([^<]*)</strong>')
 
 utidata<-as.numeric(utidata)
 utidata2<-as.numeric(utidata2)
 
-UTI_J2[j,1:6] <- as.list(c(j,utidata,utidata2))
+UTI_J2[j,1:7] <- as.list(c(j,utidata,sum(utidata[1:3]),utidata2))
 
 
 wb <- createWorkbook()
@@ -124,4 +127,5 @@ addWorksheet(wb, sheetName = 'COVIDJaragua')
 writeData(wb,'COVIDJaragua',COVID_JRG2)
 saveWorkbook(wb,"JRG_COVID_hoje.xlsx",
              overwrite = TRUE)
+
 
