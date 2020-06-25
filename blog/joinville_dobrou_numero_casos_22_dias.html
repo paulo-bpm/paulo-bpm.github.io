@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Joinville dobrou o número de casos da COVID-19 em 22 dias</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167439280-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167439280-1');
+</script>
+ <head>
+<script data-ad-client="ca-pub-6840650081582188" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<link rel="icon" href="https://covidjoinville.com/figures/covid-image.jpg" />
+
+ </head>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">COVID JOINVILLE</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="joinville.html">JOINVILLE</a>
+</li>
+<li>
+  <a href="jaragua.html">JARAGUÁ DO SUL</a>
+</li>
+<li>
+  <a href="santa-catarina.html">SANTA CATARINA</a>
+</li>
+<li>
+  <a href="blog.html">BLOGUE</a>
+</li>
+<li>
+  <a href="sobre.html">SOBRE</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Joinville dobrou o número de casos da COVID-19 em 22 dias</h1>
+<h4 class="date">17/06/2020</h4>
+
+</div>
+
+
+<html>
+<head>
+<p><link rel="canonical" href="https://covidjoinville.com/blog/joinville_dobrou_numero_casos_22_dias.html" /></p>
+<meta name=”description” content="17/06/2020 - A linha tracejada vermelha destaca o dia 27 de abril, quando havia 146 pessoas que já tinham sido infectadas pelo coronavírus na cidade. A linha azul destaca o dia 25 de maio, quando a cidade chegou ao dobro do número de casos que tinha no dia 27 de abril. Ou seja, o número de casos da COVID-19 dobrou em 28 dias. ">
+<meta property="og:title" content="Joinville dobrou o número de casos da COVID-19 em 22 dias - COVID JOINVILLE BLOG"/>
+<meta property="og:description" content="17/06/2020 - A linha tracejada vermelha destaca o dia 27 de abril, quando havia 146 pessoas que já tinham sido infectadas pelo coronavírus na cidade. A linha azul destaca o dia 25 de maio, quando a cidade chegou ao dobro do número de casos que tinha no dia 27 de abril. Ou seja, o número de casos da COVID-19 dobrou em 28 dias. " />
+<meta property="og:image" content="https://covidjoinville.com/figures/0617_total-casos-analise.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@covidjlle">
+<meta name="twitter:creator" content="@covidjlle">
+<meta name="twitter:title" content="Joinville dobrou o número de casos da COVID-19 em 22 dias ">
+<meta name="twitter:image" content="https://covidjoinville.com/figures/0617_total-casos-analise.jpeg">
+<head/>
+<html/>
+<p><a href="https://covidjoinville.com/blog">COVID JOINVILLE BLOG</a></p>
+<div class="figure">
+<img src="https://covidjoinville.com/figures/0617_total-casos-analise.jpeg" alt="" />
+<p class="caption"><em>Gráfico mostrando de quanto em quanto tempo Joinville dobra o número de casos</em></p>
+</div>
+<p><a href="https://covidjoinville.com/joinville.html">Joinville chegou ontem a 747 casos da COVID-19</a>. Mas o que esse número quer realmente dizer? É muito ou é pouco? Um valor isolado não diz muita coisa e demanda por um contexto. É possível, por exemplo, comparar com outras cidades, utilizando o número de casos por 100 mil habitantes. Mas, talvez melhor ainda seja comparar o número de casos atual com o número de casos da própria cidade ao longo do tempo. Isso pode nos dar uma boa ideia da tendência.</p>
+<p>O número de casos por 100 mil habitantes em Joinville é 126, o menor entre as 10 cidades com mais casos em Santa Catarina. Essa informação já diz muito mais que o simples número de casos. Não entanto, com isso ainda não conseguimos saber se o número de casos está aumentando muito rápido ou em um ritmo aceitável.</p>
+<p>Para obtermos essa informação precisamos analisar o gráfico do número de casos ao longo do tempo. Podemos ver que nos últimos 10 dias, houve um crescimento mais acentuado, indo de 479 casos no dia 07 de junho para 747 casos no dia 16 de junho, resultando em 268 casos nos últimos 10 dias.</p>
+<p>Uma terceira forma de analisar a situação é considerar de quanto em quanto tempo o número de casos dobra na cidade. O gráfico acima mostra o número de casos ao longo do tempo em Joinville. A linha tracejada vermelha destaca o dia 27 de abril, quando havia 146 pessoas que já tinham sido infectadas pelo coronavírus na cidade. A linha azul destaca o dia 25 de maio, quando a cidade chegou ao dobro do número de casos que tinha no dia 27 de abril. Ou seja, o número de casos da COVID-19 dobrou em 28 dias.</p>
+<p>Do dia 25 de maio até ontem, 16 de junho, o número de casos dobrou mais novamente. Dessa vez foram necessários 22 dias para que isso acontecesse. O Brasil, por exemplo, <a href="https://ourworldindata.org/covid-cases">está dobrando o número de casos a cada 19 dias</a>. O cenário no país, no entanto, não é muito promissor.</p>
+<p>Assim, quando comparada com situação do país como um todo, a situação na cidade é um pouco melhor. Porém, parece haver uma tendência de aceleração do crescimento do número de casos da COVID-19 em Joinville. Vamos aguardar os próximos dias para ver se isso se confirma.</p>
+<hr />
+<p>Mais no blog <a href="https://covidjoinville.com/blog">COVID JOINVILLE</a></p>
+<p>Siga a nossa página no <a href="https://facebook.com/covidjlle">Facebook</a></p>
+
+<style>
+  .footer{
+    position: static;
+    left: 0;
+    bottom:0;
+    width:100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+  
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+</style>
+
+<div class="footer">
+    <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<a href="https://facebook.com/covidjlle" class="fa fa-facebook"></a>
+<a href="https://twitter.com/covidjlle" class="fa fa-twitter"></a>
+</div>
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
