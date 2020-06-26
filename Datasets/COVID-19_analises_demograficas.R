@@ -1,8 +1,7 @@
 library(readxl)
 library(ggplot2)
 library(plotly)
-COVID_SC2 = read_excel(
-  "C:/Users/Miqueias/Google Drive/Marvellous Math/Coding/RStudio/Covid Jlle/Website/boavista_covid_dados_abertos.xlsx")
+COVID_SC2 = read_excel("boavista_covid_dados_abertos.xlsx")
 attach(COVID_SC2)
 
 #SELECAO DADOS SC
@@ -166,7 +165,7 @@ lc_poridade(M_IDADE,"Idade","Número de mortos em Santa Catarina")
 as.numeric(paste(IDADE))
 
 #FUNCAO PARA PLOTAR GRAFICOS SOBRE GENERO
-lc_porgenero <-function(Casos,lx,ly){
+lc_porgenero <-function(Casos,tt){
   conta <- matrix(0,nrow=2,ncol = 1)
   for(i in 1:length(Casos)){
     if(Casos[i]=="FEMININO"){
@@ -179,14 +178,18 @@ lc_porgenero <-function(Casos,lx,ly){
   
   CONTA <- data.frame(conta,conta2)
   cores <- c('#9E8FB2','#6EA09E')
-  poridade <-ggplot(CONTA,aes(x=conta2,y=conta,text=conta))+
-    geom_bar(stat="identity", width=0.7,color=cores,fill=cores) + theme_classic() +  
-    geom_text(aes(label=paste(100*round(conta/length(Casos),digits=3)," %")), vjust=-0.8, size=3)+
-    theme(axis.text.x = element_text(angle =0, vjust=0.5,size=10,face="bold")) +
-    theme(axis.text.y = element_text(vjust=0.5,size=10,face="bold")) +
-    labs(x=lx, y=ly,caption = "covidjoinville.com")+
-    theme(axis.line.y=element_blank(),axis.line.x =element_blank(),plot.caption = element_text(size=10,face="bold"))
-  return(poridade)
+  
+  fig <- plot_ly(CONTA, labels = ~conta2, values = ~conta, type = 'pie',
+                 marker = list(colors = cores,
+                               line = list(color = '#FFFFFF', width = 1)))
+  fig <- fig %>% layout(title = tt)%>% 
+    layout(annotations=list(x=1.2, y = 0.15, text = "covidjoinville.com",showarrow = F, xref='paper',
+                            yref='paper',xanchor='right', yanchor='auto', xshift=0, yshift=0,
+                            font=list(size=12)))
+  
+  return(fig)
 }
-lc_porgenero(SEXO_J,"Sexo","N?mero de casos em Joinville")
+lc_porgenero(JLLE$SEXO_C,"Casos por sexo em Joinville")
+ggplotly(lc_porgenero(JLLE$SEXO_C,"Sexo","N?mero de casos em Joinville"))
 
+px.pie(df, values='pop', names='country', title='Population of European continent')
