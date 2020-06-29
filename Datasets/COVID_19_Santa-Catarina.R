@@ -2,7 +2,6 @@ library(RCurl)
 library(XML)
 library(readxl)
 library(openxlsx)
-library(plotly.express)
 
 ###########################
 
