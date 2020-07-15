@@ -110,8 +110,8 @@ grabnewdata <- function(pagedata,mypattern){
 dadoshoje = matrix(nrow = 1, ncol = 7)
 dadoshoje[1,1] <- grabnewdata(jrgpage[linha[2]:linha[3]-1],'\t\t\t([^<]*) casos confirmados') #TOTAL
 dadoshoje[1,2] <- grabnewdata(jrgpage[linha[2]:linha[3]-1],'\t\t\t([^<]*) recuperados') #RECUPERADOS
-dadoshoje[1,3] <- 0 #grabnewdata(jrgpage[linha[2]:linha[3]-1],'\t\t\t([^<]*) em ') #EM ISOLAMENTO
-dadoshoje[1,4] <- 0 #grabnewdata(jrgpage[linha[2]:linha[3]-1],'\t\t\t([^<]*) internado') #INTERNADOS
+#dadoshoje[1,3] <-  #grabnewdata(jrgpage[linha[2]:linha[3]-1],'\t\t\t([^<]*) em ') #EM ISOLAMENTO
+#dadoshoje[1,4] <-  #grabnewdata(jrgpage[linha[2]:linha[3]-1],'\t\t\t([^<]*) internado') #INTERNADOS
 dadoshoje[1,5] <- grabnewdata(jrgpage[linha[2]:linha[3]-1],'\t\t\t([^<]*) Ã³bitos') #MORTES
 dadoshoje[1,6] <- j
 dadoshoje[1,7] <- grabnewdata(jrgpage[linha[2]:linha[3]-1],'\t\t\t([^<]*) em ')
