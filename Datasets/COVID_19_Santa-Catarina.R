@@ -68,7 +68,6 @@ j <- length(UTI_J$CONTAD)+1
 UTI_J2 <-UTI_J
 
 linha <-as.numeric(grep('de leitos de UTI',pmjpage))
-pmjpage[linha[3]:(linha[3]+85)]
 utidata <- grabnewdata(pmjpage[(linha[3]+16):(linha[3]+22)],'<td>([^<]*)</td>')
 utidata2 <- grabnewdata(pmjpage[linha[3]:(linha[3]+22)],'<strong>([^<]*)</strong>')
 
