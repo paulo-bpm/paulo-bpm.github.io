@@ -24,17 +24,29 @@ grabnewdata <- function(pagedata,mypattern){
 
 dadoshoje <- matrix(0,nrow = 1, ncol = 11)
 datahoje <- j+1
-dadoshoje[1,1:11]<-c(grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\">([^<]*)</td>')[2],
-                     grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\">([^<]*)</td>')[3],
-                     grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\">([^<]*)</td>')[4],
-                     grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\">([^<]*)</td>')[5],
-                     grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\"><strong>([^<]*)</strong></td>')[1],
-                     grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\">([^<]*)</td>')[6],
-                     grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\">([^<]*)</td>')[7],
-                     grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\">([^<]*)</td>')[8],
-                     grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\"><strong>([^<]*)</strong></td>')[2],
-                     grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\"><strong>([^<]*)</strong></td>')[3],
-                     grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\"><strong>([^<]*)</strong></td>')[4])
+dadoshoje[1,1:11]<-c(grabnewdata(pmjpage[315:329],'<td>([^<]*)</td>')[2],
+                     grabnewdata(pmjpage[315:329],'<td>([^<]*)</td>')[3],
+                     grabnewdata(pmjpage[315:329],'<td>([^<]*)</td>')[4],
+                     grabnewdata(pmjpage[315:329],'<td>([^<]*)</td>')[5],
+                     grabnewdata(pmjpage[315:329],'<td><strong>([^<]*)</strong></td>')[1],
+                     grabnewdata(pmjpage[315:329],'<td>([^<]*)</td>')[6],
+                     grabnewdata(pmjpage[315:329],'<td>([^<]*)</td>')[7],
+                     grabnewdata(pmjpage[315:329],'<td>([^<]*)</td>')[8],
+                     grabnewdata(pmjpage[315:329],'<td><strong>([^<]*)</strong></td>')[2],
+                     grabnewdata(pmjpage[315:329],'<td><strong>([^<]*)</strong></td>')[3],
+                     grabnewdata(pmjpage[315:329],'<td><strong>([^<]*)</strong></td>')[4])
+# dadoshoje[1,1:11]<-c(grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\">([^<]*)</td>')[2],
+                     #grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\">([^<]*)</td>')[3],
+                     #grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\">([^<]*)</td>')[4],
+                     #grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\">([^<]*)</td>')[5],
+                     #grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\"><strong>([^<]*)</strong></td>')[1],
+                     #grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\">([^<]*)</td>')[6],
+                     #grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\">([^<]*)</td>')[7],
+                     #grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\">([^<]*)</td>')[8],
+                     #grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\"><strong>([^<]*)</strong></td>')[2],
+                     #grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\"><strong>([^<]*)</strong></td>')[3],
+                     #grabnewdata(pmjpage[315:329],'<td style=\"height: 48px;\"><strong>([^<]*)</strong></td>')[4])
+
 dadoshoje <- as.numeric(dadoshoje)
 COVID_J2 <- 0
 COVID_J2 <-COVID_J
