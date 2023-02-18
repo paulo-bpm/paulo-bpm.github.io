@@ -1,444 +1,77 @@
 <!DOCTYPE html>
-
-<html>
-
-<head>
-
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-
-
-
-
-<title>COVID JOINVILLE</title>
-
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167439280-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-167439280-1');
-</script>
- <head>
-<script data-ad-client="ca-pub-6840650081582188" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-<link rel="icon" href="https://covidjoinville.com/figures/covid-image.jpg" />
-
- </head>
-
-<style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
-<script type="text/javascript">
-if (window.hljs) {
-  hljs.configure({languages: []});
-  hljs.initHighlightingOnLoad();
-  if (document.readyState && document.readyState === "complete") {
-    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
-  }
-}
-</script>
-
-
-
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
-
-
-
-
-<style type = "text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-}
-.tabbed-pane {
-  padding-top: 12px;
-}
-.html-widget {
-  margin-bottom: 20px;
-}
-button.code-folding-btn:focus {
-  outline: none;
-}
-summary {
-  display: list-item;
-}
-</style>
-
-
-<style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
-}
-.dropdown-submenu {
-  position: relative;
-}
-.dropdown-submenu>.dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-top: -6px;
-  margin-left: -1px;
-  border-radius: 0 6px 6px 6px;
-}
-.dropdown-submenu:hover>.dropdown-menu {
-  display: block;
-}
-.dropdown-submenu>a:after {
-  display: block;
-  content: " ";
-  float: right;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #cccccc;
-  margin-top: 5px;
-  margin-right: -10px;
-}
-.dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
-}
-.dropdown-submenu.pull-left {
-  float: none;
-}
-.dropdown-submenu.pull-left>.dropdown-menu {
-  left: -100%;
-  margin-left: 10px;
-  border-radius: 6px 0 6px 6px;
-}
-</style>
-
-<script>
-// manage active state of menu based on current page
-$(document).ready(function () {
-  // active menu anchor
-  href = window.location.pathname
-  href = href.substr(href.lastIndexOf('/') + 1)
-  if (href === "")
-    href = "index.html";
-  var menuAnchor = $('a[href="' + href + '"]');
-
-  // mark it active
-  menuAnchor.parent().addClass('active');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
-});
-</script>
-
-<!-- tabsets -->
-
-<style type="text/css">
-.tabset-dropdown > .nav-tabs {
-  display: inline-table;
-  max-height: 500px;
-  min-height: 44px;
-  overflow-y: auto;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
-  font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
-}
-
-.tabset-dropdown > .nav-tabs > li.active {
-  display: block;
-}
-
-.tabset-dropdown > .nav-tabs > li > a,
-.tabset-dropdown > .nav-tabs > li > a:focus,
-.tabset-dropdown > .nav-tabs > li > a:hover {
-  border: none;
-  display: inline-block;
-  border-radius: 4px;
-  background-color: transparent;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
-  display: block;
-  float: none;
-}
-
-.tabset-dropdown > .nav-tabs > li {
-  display: none;
-}
-</style>
-
-<!-- code folding -->
-
-
-
-
-</head>
-
-<body>
-
-
-<div class="container-fluid main-container">
-
-
-
-
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html">COVID JOINVILLE</a>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Miqueias Brikalski</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="icon" href="favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Julee&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    <div class="navigation-bar">
+        <ul class="menu">
+            <li class="menu-items"><a class="active" href="index.html">Home</a></li>
+            <li class="menu-items"><a herf="blog/blog.html">Blog</a></li>
+        </ul>
     </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li>
-  <a href="joinville.html">JOINVILLE</a>
-</li>
-<li>
-  <a href="jaragua.html">JARAGUÁ DO SUL</a>
-</li>
-<li>
-  <a href="santa-catarina.html">SANTA CATARINA</a>
-</li>
-<li>
-  <a href="blog.html">BLOGUE</a>
-</li>
-<li>
-  <a href="sobre.html">SOBRE</a>
-</li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        
-      </ul>
-    </div><!--/.nav-collapse -->
-  </div><!--/.container -->
-</div><!--/.navbar -->
-
-<div class="fluid-row" id="header">
-
-
-
-<h1 class="title toc-ignore">COVID JOINVILLE</h1>
-
-</div>
-
-
-<html>
-<head>
-<p><link rel="canonical" href="https://covidjoinville.com" /></p>
-<meta name=”description” content="Os números do coronavírus em Joinville, Jaraguá do Sul e Santa Catarina em gráficos.Opinião e análise no blogue. Confira todo isso e muito mais no portal COVID Joinville.">
-<meta property="og:title" content="COVID JOINVILLE"/>
-<meta property="og:description" content="Os números do coronavírus em Joinville, Jaraguá do Sul e Santa Catarina em gráficos.Opinião e análise no blogue. Confira todo isso e muito mais no portal COVID Joinville." />
-<meta property="og:image" content="https://covidjoinville.com/figures/0618_casos-dia.jpeg" />
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@covidjlle">
-<meta name="twitter:creator" content="@covidjlle">
-<meta name="twitter:title" content="COVID JOINVILLE">
-<meta name="twitter:description" content="Os números do coronavírus em Joinville, Jaraguá do Sul e Santa Catarina em gráficos.Opinião e análise no blogue. Confira todo isso e muito mais no portal COVID Joinville.">
-<meta name="twitter:image" content="https://covidjoinville.com/figures/0618_casos-dia.jpeg">
-<head/>
-<html/>
-<hr />
-<div id="blogue" class="section level2">
-<h2><a href="blog.html"><strong>BLOGUE</strong></a></h2>
-<p>Confira análises detalhadas dos dados e outras refelxões sobre a pandemia no Blogue.</p>
-</div>
-<div id="covid-19-joinville" class="section level2">
-<h2><a href="joinville.html"><strong>COVID-19 JOINVILLE</strong></a></h2>
-<p>O painel mais completo sobre o coronavírus em Joinville, com todos os detalhes sobre os dados da COVID-19 mostrados em gráficos.</p>
-</div>
-<div id="covid-19-jaraguá-do-sul" class="section level2">
-<h2><a href="jaragua.html"><strong>COVID-19 JARAGUÁ DO SUL</strong></a></h2>
-<p>Gráficos mostrando em detalhes disseminação do coronavírus em Jaraguá do Sul.</p>
-</div>
-<div id="covid-19-santa-catarina" class="section level2">
-<h2><a href="santa-catarina.html"><strong>COVID-19 SANTA CATARINA</strong></a></h2>
-<p>Análises demográficas dos dados da COVID-19 em Santa Catarina, com gráficos mostrando a distribuição dos casos e das mortes em decorrência da doença por idade e por sexo.</p>
-</div>
-
-<style>
-  .footer{
-    position: static;
-    left: 0;
-    bottom:0;
-    width:100%;
-    background-color: black;
-    color: white;
-    text-align: center;
-  }
-  
-
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.fa:hover {
-  opacity: 0.7;
-}
-
-/* Set a specific color for each brand */
-/* Facebook */
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-/* Twitter */
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-</style>
-
-<div class="footer">
-    <!-- Add icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<a href="https://facebook.com/covidjlle" class="fa fa-facebook"></a>
-<a href="https://twitter.com/covidjlle" class="fa fa-twitter"></a>
-</div>
+    <div class="top-container">
+        <img class="top-cloud" src="images/cloud.png" alt="cloud-img">
+        <h1>Miqueias Brikalski</h1>
+        <h2> an engineer.</h2>
+        <br>
+        <img class="bottom-cloud" src="images/cloud.png" alt="cloud-img">
+        <img src="images/mountain.png" alt="mountain-img">
+    </div>
+    <div class="middle-container">
+        <div class="profile">
+            <img class="profile-pic" src="images/old_portrait.jpeg" alt="miqueias-brikalski-portrait">
+            <h2>Hello.</h2>
+            <p>I am a geotechnical engineer from Brazil.</p> <p>"Looking for the One that made me"</p>
+        </div>
+        <hr>
+        <div class="skills">
+            <h2>My interests.</h2>
+            <div class="skill-row">
+                <img class="math-icon" src="images/abacus.png" alt="abacus-icon">
+                <h3>Engineering</h3>
+                <p>I studied civil engineering at Santa Catarina State University. I enjoyed my soil mechanics classes so much that I decided I wanted more of that. Hence a master's in geotechnical engineering at UT Austin.  My master's thesis was about soil-geosynthetic interacting using thw SGI model.</p>
+            </div>
+            <div class="skill-row">
+                <img class="code-icon" src="images/coding.png" alt="coding-icon">
+                <h3>Coding</h3>
+                <p>Coding is one of my hobbies. I first became interested in it when taking a class on the basics of programing in my undergrad. Later I learned Python, which I really enjoy became very handy during my time doing research in grad school. I have also been exploring hmlt and css, resulting in this website.   </p>
+            </div>
+            <div class="skill-row">
+                <img class="book-icon" src="images/book.png" alt="book-icon">
+                <h3>Reading</h3>
+                <p>I cannot go many days without reading a book. Fantasy books, such as LOTR (my favorite), and books about sociology and psycology, such as Outliers, are what I enjoy the most.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="contact-me">
+            <h2>Get In Touch</h2>
+            <br>
+            <h3>Recommend me a book.</h3>
+            <br>
+            <p>If you have something interesting to share about engineering, or about coding, or just something interesting, drop me an email. I also look forward to any book recommendations</p>
+            <br>
+            <br>
+            <a class="btn" href="mailto:miqueias.19@gmail.com">CONTACT ME</a>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
 
 
-
-</div>
-
-<script>
-
-// add bootstrap table styles to pandoc tables
-function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
-}
-$(document).ready(function () {
-  bootstrapStylePandocTables();
-});
-
-
-</script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
-<!-- code folding -->
-
-
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
-
-</body>
+    <div class="bottom-container">
+        <a class="footer-link" href="https://www.linkedin.com/">LinkedIn</a>
+        <a class="footer-link" href="https://twitter.com/">Twitter</a>
+        <a class="footer-link" href="https://www.appbrewery.co/">Website</a>
+        <br>
+        <p>© 2023 Miqueias Brikalski.</p>
+    </div>
+    </body>
 </html>
