@@ -73,10 +73,8 @@
         border-color: black;
         border-style: solid;
         border-width: 0;
-        /*height: 200px;*/
         padding-top: 100px;
-        /*position: fixed;*/
-        /*width: 200px;*/
+        width: 100%;
     }
     .top-cloud {
         position: absolute;
@@ -92,6 +90,7 @@
     /****************** Middle container classes: *********************/
     .middle-container {
         margin: 100px 0;
+        width: 100%;
     }
     .profile-pic {
         border-radius: 50%;
@@ -163,6 +162,7 @@
         background-color: #93BFCF;
         padding: 50px 0 20px;
         color: #EEE9DA;
+        width: 100%;
     }
     .footer-link {
         padding: 30px;
