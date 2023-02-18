@@ -79,7 +79,7 @@
     .top-cloud {
         position: absolute;
         top: 150px;
-        left: 1000px;
+        right: 300px;
     }
     .bottom-cloud {
         position: absolute;
