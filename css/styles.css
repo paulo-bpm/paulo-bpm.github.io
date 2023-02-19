@@ -27,20 +27,18 @@
     p {
         font-size: 1rem;
         line-height: 2;
+        margin: 0;
     }
     hr {
         border-style: dotted none none none;
         border-width: 0.35rem;
         color: #BDCDD6;
         height: 0px;
-        margin: 100px auto;
+        margin: 80px auto;
         width: 4%;
     }
     img {
         /*position: static;*/
-    }
-    a:link {
-        text-decoration: none;
     }
     a:hover {
         color: #EEE9DA;
@@ -49,7 +47,7 @@
     /********************* Navigation Bar *****************/
     .navigation-bar {
         background-color: #93BFCF;
-        padding: 38px;
+        padding: 30px;
         position: fixed;
         width: 100%;
     }
@@ -63,11 +61,12 @@
         padding: 0 20px;
         font-size: 1.7rem;
     }
-    .active {
-      color: white;
-    }
 
     /*************** Top Container classes: ***************/
+    .navigation-bar-space {
+            padding: 50px 10%;
+            width: 100%;
+    }
     .top-container {
         background-color: #BDCDD6;
         border-color: black;
@@ -78,7 +77,7 @@
     }
     .top-cloud {
         position: absolute;
-        top: 150px;
+        top: 200px;
         right: 15%;
     }
     .bottom-cloud {
@@ -104,27 +103,21 @@
 
     /*** Skill container classes ***/
         .skill-row {
-            padding: 10px 0;
-            margin: 0px auto;
+            padding: 0 0;
+            margin: 50px auto;
             width: 50%;
             text-align: left;
         }
-        .math-icon {
+        .left-icon {
             width: 25%;
             float: left;
             margin-right: 10px;
         }
-        .code-icon {
+        .right-icon {
             width: 25%;
             float: right;
             margin-left: 10px;
          }
-        .book-icon {
-            width: 25%;
-            float: left;
-            margin-right: 10px;
-        }
-
     /*** Contact me classes ***/
     .contact-me {
         margin: 30px auto;
@@ -157,15 +150,55 @@
           text-decoration: none;
         }
 
+        /************* blog classes *****************/
+        .text {
+            margin: 0px auto;
+            padding: 0 10%;
+            text-align: left;
+            width: 50%;
+        }
+        .notes {
+            font-size: 0.7rem;
+            font-style: italic
+            text-align: left
+        }
+        .post-image{
+            width: 100%
+        }
+        .post-figure{
+            margin: 0 auto;
+            width: 70%;
+            text-align: center;
+            padding-top: 30px;
+        }
+        .post-title {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            margin-top: 50px;
+        }
     /******************** Bottom container classes: ****************/
     .bottom-container{
         background-color: #93BFCF;
-        padding: 50px 0 20px;
         color: #EEE9DA;
+        margin: 100px 0 0;
+        padding: 50px 0 20px;
         width: 100%;
     }
-    .footer-link {
+    .link {
         padding: 30px;
         color: #11999E;
         font-weight: bold;
+        text-decoration: none;
+    }
+
+    .active {
+      color: white;
+    }
+
+    .read-more {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        text-decoration: underline;
+        text-align: right;
     }
