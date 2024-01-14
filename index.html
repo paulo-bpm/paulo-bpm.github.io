@@ -1,78 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Miqueias Brikalski</title>
-        <link rel="stylesheet" href="css/styles.css">
-        <link rel="icon" href="favicon.ico">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Julee&family=Poppins:wght@200&display=swap" rel="stylesheet">
-    </head>
-    <body>
-    <div class="navigation-bar">
-        <ul class="menu">
-            <li class="menu-items"><a class="link active" href="index.html">About</a></li>
-            <li class="menu-items"><a class="link" href="blog.html">Blog</a></li>
-        </ul>
-    </div>
-    <div class="navigation-bar-space"></div>
-    <div class="top-container">
-        <img class="top-cloud" src="images/cloud.png" alt="cloud-img">
-        <h1>Miqueias Brikalski</h1>
-        <h2> an engineer.</h2>
-        <br>
-        <img class="bottom-cloud" src="images/cloud.png" alt="cloud-img">
-        <img src="images/mountain.png" alt="mountain-img">
-    </div>
-    <div class="middle-container">
-        <div class="profile">
-            <img class="profile-pic" src="images/old_portrait.jpeg" alt="miqueias-brikalski-portrait">
-            <h2>Hello.</h2>
-            <p>I am a geotechnical engineer from Brazil.</p> <p>"Looking for the One that made me"</p>
+<head>
+    <meta charset="UTF-8">
+    <title>Miqueias Brikalski</title>
+    
+    <!--    font awesome    -->
+    <script src="https://kit.fontawesome.com/067121f28c.js" crossorigin="anonymous"></script>
+    <!--    Bootstrap    -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    
+    <!--    Google Fonts    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gajraj+One&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,700;0,900;1,100;1,200;1,300&family=Ubuntu&display=swap" rel="stylesheet">
+    <!--    css     -->
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <!--    Tittle Section      -->
+    <section id="title">
+        <div  class="colored-section">
+            <!--    mav-bar     -->
+            <nav class="navigation-bar navbar navbar-expand-lg navbar-dark fixed-top">
+                    <a class="navbar-brand" href="#">mpb</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navMenu">
+                        <ul class="navbar-nav ms-auto pe-5">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#title">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./blog.html#blog-section">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#contact-section">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+            </nav>
+            <!--        Title       -->
+            <div class="row title-container">
+                <div class="col-2 left-cloud-container">
+                    <img src="images/cloud.png">
+                </div>
+                <div class="col-8">
+                    <h1 class="big-heading">Miqueias Brikalski</h1>
+                    <p>an engineer.</p>
+                    <img src="images/mountain.png">
+                </div>
+                <div class="col-2">
+                    <img src="images/cloud.png">
+                </div>
+            </div>
         </div>
-        <hr>
-        <div class="skills">
-            <h2>My interests.</h2>
-            <div class="skill-row">
-                <img class="left-icon" src="images/abacus.png" alt="abacus-icon">
-                <h3>Engineering</h3>
-                <p>I studied civil engineering at Santa Catarina State University. I enjoyed my soil mechanics classes so much that I decided I wanted more of that. Hence a master's in geotechnical engineering at UT Austin.  My master's thesis was about soil-geosynthetic interacting using thw SGI model.</p>
+    </section>
+    <!--    Presentation Section     -->
+    <section id="presentation-section">
+        <div class="white-section">
+            <img class="round-pic" src="images/portrait.jpeg">
+            <h2>Hello</h2>
+            <p>I am a geotechnical engineer from Brazil.</p>
+            <p>"Looking for the One that made me"</p>
+        </div>
+    </section>
+    <hr>
+    
+    <!--     Interest Section       -->
+    <section id="interest-section">
+        <div class="white-section">
+            <h2>My interests</h2>
+            <div class="row skill-container">
+                <div class="col-3">
+                    <img src="images/abacus.png">
+                </div>
+                <div class="col-9">
+                    <h3>Engineering</h3>
+                    <p>I studied civil engineering at Santa Catarina State University. I enjoyed my soil mechanics classes
+                        so much that I decided I wanted more of that. Hence a master's in geotechnical engineering at UT
+                        Austin. My master's thesis was about soil-geosynthetic interacting using thw SGI model.</p>
+                </div>
             </div>
-            <div class="skill-row">
-                <img class="right-icon" src="images/coding.png" alt="coding-icon">
-                <h3>Coding</h3>
-                <p>Coding is one of my hobbies. I first became interested in it when taking a class on the basics of programing in my undergrad. Later I learned Python, which I really enjoy became very handy during my time doing research in grad school. I have also been exploring hmlt and css, resulting in this website.   </p>
+            <div class="row skill-container">
+                <div class="col-9">
+                    <h3>Coding</h3>
+                    <p>Coding is one of my hobbies. I first became interested in it when taking a class on the basics
+                        of programing in my undergrad. Later I learned Python, which I really enjoy became very handy
+                        during my time doing research in grad school. I have also been exploring hmlt and css,
+                        resulting in this website.</p>
+                </div>
+                <div class="col-3">
+                    <img src="images/coding.png">
+                </div>
             </div>
-            <div class="skill-row">
-                <img class="left-icon" src="images/book.png" alt="book-icon">
-                <h3>Reading</h3>
-                <p>I cannot go many days without reading a book. Fantasy books, such as LOTR (my favorite), and books about sociology and psycology, such as Outliers, are what I enjoy the most.</p>
+            <div class="row skill-container">
+                <div class="col-3">
+                    <img src="images/book.png">
+                </div>
+                <div class="col-9">
+                    <h3>Reading</h3>
+                    <p>I cannot go many days without reading a book. Fantasy books, such as LOTR (my favorite), and
+                        books about sociology and psychology, such as Outliers, are what I enjoy the most.</p>
+                </div>
             </div>
         </div>
-        <hr>
-        <div class="contact-me">
+    </section>
+    <hr>
+    
+    <!--    Contact Section     -->
+    <section id="contact-section">
+        <div class="white-section">
             <h2>Get In Touch</h2>
             <br>
             <h3>Recommend me a book.</h3>
             <br>
-            <p>If you have something interesting to share about engineering, or about coding, or just something interesting, drop me an email. I also look forward to any book recommendations</p>
+            <p>If you have something interesting to share about engineering, or about coding, or just something
+                interesting, drop me an email. I also look forward to any book recommendations</p>
             <br>
-            <br>
-            <a class="btn" href="mailto:miqueias.19@gmail.com">CONTACT ME</a>
-            <br>
-            <br>
-            <br>
+            <a class="contact-button btn btn-light btn-lg" href="mailto:miqueias.19@gmail.com"><i class="fa-solid fa-envelope"></i>   CONTACT ME</a>
         </div>
-    </div>
-
-
-    <div class="bottom-container">
-        <a class="link" href="https://www.linkedin.com/">LinkedIn</a>
-        <a class="link" href="https://twitter.com/">Twitter</a>
-        <a class="link" href="">Website</a>
-        <br>
-        <p>© 2023 Miqueias Brikalski.</p>
-    </div>
-    </body>
+    </section>
+    
+    <!--    Footer Section      -->
+    <section id="footer">
+        <div class="colored-section">
+            <a href="https://www.linkedin.com/in/miqueias-brikalski/"><i class="icon fa-brands fa-linkedin"></i></a><a href="#"><i class="icon fa-brands fa-square-twitter"></i></a><a href="https://www.instagram.com/miqueiasbrikalski/"><i class="icon fa-brands fa-square-instagram"></i></a>
+            <p>©
+                <script type="text/javascript">
+                    document.write(new Date().getFullYear());
+                </script>
+                Miqueias Brikalski.
+            </p>
+        </div>
+    </section>
+</body>
 </html>

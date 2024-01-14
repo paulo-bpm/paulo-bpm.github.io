@@ -1,0 +1,204 @@
+
+    body{
+        color: #40514E;
+        margin: 0;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+    }
+    h1 {
+        color: #6096B4;
+        font-size: 3rem;
+        /*line-height: 2;*/
+        margin: 50px auto 0 auto;
+        font-family: 'Julee', cursive;
+    }
+    h2 {
+        color: #6096B4;
+        font-size: 1.7rem;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+    h3 {
+        color: #11999E;
+        font-size: 1.2rem;
+        line-height: 2;
+        margin: 0px;
+    }
+    p {
+        font-size: 1rem;
+        line-height: 2;
+        margin: 0;
+    }
+    hr {
+        border-style: dotted none none none;
+        border-width: 0.35rem;
+        color: #BDCDD6;
+        height: 0px;
+        margin: 80px auto;
+        width: 4%;
+    }
+    img {
+        /*position: static;*/
+    }
+    a:hover {
+        color: #EEE9DA;
+    }
+    /*********************** CLASSES*************************************/
+    /********************* Navigation Bar *****************/
+    .navigation-bar {
+        background-color: #93BFCF;
+        padding: 30px 0;
+        position: fixed;
+        width: 100%;
+    }
+    .menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    .menu-items {
+        display: inline;
+        padding: 0 20px;
+        font-size: 1.7rem;
+    }
+
+    /*************** Top Container classes: ***************/
+    .navigation-bar-space {
+            padding: 50px 0;
+            width: 100%;
+    }
+    .top-container {
+        background-color: #BDCDD6;
+        border-color: black;
+        border-style: solid;
+        border-width: 0;
+        padding-top: 100px;
+        width: 100%;
+    }
+    .top-cloud {
+        position: absolute;
+        top: 200px;
+        right: 15%;
+    }
+    .bottom-cloud {
+        position: absolute;
+        left: 15%;
+        top: 500px;
+    }
+
+    /****************** Middle container classes: *********************/
+    .middle-container {
+        margin: 100px 0;
+        width: 100%;
+    }
+    .profile-pic {
+        border-radius: 50%;
+        height:150px;
+        width: 150px;
+    }
+    .profile {
+        margin: auto;
+        width: 30%;
+    }
+
+    /*** Skill container classes ***/
+        .skill-row {
+            padding: 0 0;
+            margin: 50px auto;
+            width: 50%;
+            text-align: left;
+        }
+        .left-icon {
+            width: 25%;
+            float: left;
+            margin-right: 10px;
+        }
+        .right-icon {
+            width: 25%;
+            float: right;
+            margin-left: 10px;
+         }
+    /*** Contact me classes ***/
+    .contact-me {
+        margin: 30px auto;
+        width: 40%;
+    }
+        .btn {
+          background: #3498db;
+          background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+          background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+          background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+          background-image: -o-linear-gradient(top, #3498db, #2980b9);
+          background-image: linear-gradient(to bottom, #3498db, #2980b9);
+          -webkit-border-radius: 8;
+          -moz-border-radius: 8;
+          border-radius: 8px;
+          font-family: Arial;
+          color: #ffffff;
+          font-size: 20px;
+          padding: 10px 20px 10px 20px;
+          text-decoration: none;
+        }
+
+        .btn:hover {
+          background: #3cb0fd;
+          background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+          background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+          background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+          background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+          background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+          text-decoration: none;
+        }
+
+        /************* blog classes *****************/
+        .text {
+            margin: 0px auto;
+            padding: 0 10%;
+            text-align: left;
+            width: 50%;
+        }
+        .notes {
+            font-size: 0.7rem;
+            font-style: italic
+            text-align: left
+        }
+        .post-image{
+            width: 100%
+        }
+        .post-figure{
+            margin: 0 auto;
+            width: 70%;
+            text-align: center;
+            padding-top: 30px;
+        }
+        .post-title {
+            padding-bottom: 0;
+            margin-bottom: 0;
+            margin-top: 50px;
+        }
+    /******************** Bottom container classes: ****************/
+    .bottom-container{
+        background-color: #93BFCF;
+        color: #EEE9DA;
+        margin: 100px 0 0;
+        padding: 50px 0 20px;
+        width: 100%;
+    }
+    .link {
+        padding: 30px;
+        color: #11999E;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .active {
+      color: white;
+    }
+
+    .read-more {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        text-decoration: underline;
+        text-align: right;
+    }
